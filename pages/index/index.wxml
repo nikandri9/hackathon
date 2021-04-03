@@ -1,5 +1,9 @@
 <!--index.wxml-->
 <view class="container">
-		<view class="picture-landing"></view>
+		<!-- <view class="picture-landing"></view> -->
+		<!-- <view class="dinerImage"> -->
+			<image src="{{dinerProfile.img.path}}" mode="widthFix"></image>
+		<!-- </view> -->
+
 		<button class="button-yellow">START</button>
 </view>
