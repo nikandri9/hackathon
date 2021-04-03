@@ -13,6 +13,6 @@ App({
     
   },
   globalData: {
-    userInfo: null
+    userInfo: wx.getStorageSync('userInfo')
   }
 })

@@ -2,6 +2,7 @@
 <!--pages/hackathon/hackathon.wxml-->
 <view class="title">RESTAURANT NAME</view>
 <view class="rest-tag">INDIAN FOOD</view>
+
 <view class="container">
   <block wx:for="{{meals}}" wx:key="key" wx:for-item="meal" class="meals-grid">
       <view class="card">
@@ -13,7 +14,7 @@
               <view class="meal-price">¥{{meal.price}}</view>
           </view>
       </view>
-        <view class="plus" bindtap="createOrder" data-id="{{meal.id}}">+</view>
+        <view wx:if="{{currentUser}}" class="plus" bindtap="createOrder" data-id="{{meal.id}}">+</view>
       
       </view>
     </block>
@@ -22,7 +23,7 @@
   <view class="order-section">
     <view>TOTAL</view>
     <view>$150</view>
-    <view class="btn-black">ORDER</view>
+    <view class="btn-black" bindtap='goToOrder'>ORDER</view>
   </view>
 </block>
 
