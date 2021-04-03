@@ -10,7 +10,6 @@ App({
      // 应用名称: {{app_name}}
     wx.BaaS.init(config.appKey)
     
-
     
   },
   globalData: {
