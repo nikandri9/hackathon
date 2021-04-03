@@ -34,7 +34,7 @@ page {
 
 .greyTag{
   padding: 16rpx 30rpx;
-  width: 200rpx;
+  width: 210rpx;
   border-radius: 10rpx;
   background-color: #f7f7f7;
   color: #9e9e9f;

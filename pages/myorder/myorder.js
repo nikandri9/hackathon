@@ -1,66 +1,35 @@
 // pages/myorder/myorder.js
 Page({
 
-  /**
-   * Page initial data
-   */
   data: {
-
+    meals: [],
+    currentUser: null
   },
 
-  /**
-   * Lifecycle function--Called when page load
-   */
   onLoad: function (options) {
-
+    this.setData({
+      currentUser: app.globalData.userInfo
+    })
   },
 
-  /**
-   * Lifecycle function--Called when page is initially rendered
-   */
+  userInfoHandler: function(userInfo) {
+    let self = this
+    wx.BaaS.auth.loginWithWechat(userInfo).then(
+      (res) => {
+      console.log('userInfo', res);
+      self.setData({currentUser: res});
+      wx.setStorageSync('userInfo', res)
+      },
+      err => {
+      console.log('something went wrong!', err)
+    })
+  },
+
   onReady: function () {
 
   },
 
-  /**
-   * Lifecycle function--Called when page show
-   */
   onShow: function () {
-
-  },
-
-  /**
-   * Lifecycle function--Called when page hide
-   */
-  onHide: function () {
-
-  },
-
-  /**
-   * Lifecycle function--Called when page unload
-   */
-  onUnload: function () {
-
-  },
-
-  /**
-   * Page event handler function--Called when user drop down
-   */
-  onPullDownRefresh: function () {
-
-  },
-
-  /**
-   * Called when page reach bottom
-   */
-  onReachBottom: function () {
-
-  },
-
-  /**
-   * Called when user click on the top right corner to share
-   */
-  onShareAppMessage: function () {
 
   }
 })
