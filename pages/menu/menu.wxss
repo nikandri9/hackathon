@@ -41,7 +41,7 @@ page {
   background-color: #f7f7f7;
   box-sizing: border-box;
   border-radius: 16rpx;
-  justify-content: space-around;
+  justify-content: space-between;
 }
 
 

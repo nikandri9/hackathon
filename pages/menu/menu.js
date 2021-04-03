@@ -50,7 +50,7 @@ Page({
     let newOrder = Order.create()
     newOrder.set({
       meal_id: e.currentTarget.dataset.id,
-      // user_id: this.data.currentUser.id,
+      user_id: this.data.currentUser.id,
       count: 1
     })
 
@@ -66,16 +66,22 @@ Page({
     )
   },
 
-  // userInfoHandler: function(userInfo) {
-  //   let self = this
-  //   wx.BaaS.auth.loginWithWechat(userInfo).then(
-  //     (res) => {
-  //     console.log('userInfo', res);
-  //     self.setData({currentUser: res});
-  //     wx.setStorageSync('userInfo', res)
-  //     },
-  //     err => {
-  //     console.log('something went wrong!', err)
-  //   })
-  // }
+  userInfoHandler: function(userInfo) {
+    let self = this
+    wx.BaaS.auth.loginWithWechat(userInfo).then(
+      (res) => {
+      console.log('userInfo', res);
+      self.setData({currentUser: res});
+      wx.setStorageSync('userInfo', res)
+      },
+      err => {
+      console.log('something went wrong!', err)
+    })
+  },
+
+  goToOrder: function() {
+    wx.navigateTo({
+      url: '/pages/myorder/myorder',
+    })
+  }
 })
