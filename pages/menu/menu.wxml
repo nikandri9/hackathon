@@ -1,0 +1,22 @@
+<!--pages/hackathon/hackathon.wxml-->
+<view class="title">RESTAURANT NAME</view>
+<view class="rest-tag">INDIAN FOOD</view>
+<view class="container">
+    <!-- <view wx:for = "{{restaurants}}" wx:key="key" wx:for-item = "rest"> -->
+      <view class="card">
+        <view class="meal-info">
+          <view style="background-image: url('{{rest.Picture.path}}'); background-size: cover;" alt="restaurant" class="meal-image"></view>
+          <view>
+            <view class="meal-title">Meal name</view>
+            <view class="meal-description">Meal description</view>
+              <view class="meal-price">$11</view>
+          </view>
+      </view>
+        <view class="plus">+</view>
+      </view>
+</view>
+<view class="order-section">
+  <view>TOTAL</view>
+  <view>$150</view>
+  <view class="btn-black">ORDER</view>
+</view>

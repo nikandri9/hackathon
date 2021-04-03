@@ -1,0 +1,117 @@
+/* pages/menu/menu.wxss */
+page {
+  font-family: "Montserrat", "PingFang SC", Arial, sans-serif;
+  padding: 30px;
+  font-weight: 600;
+  color: #333;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.title {
+  padding: 0 0 10px 0;
+  font-size: 16pt;
+  margin: 0 0 0 16rpx;
+}
+
+.rest-tag {
+  padding: 16rpx 30rpx;
+  width: 220rpx;
+  border-radius: 10rpx;
+  background-color: #f7f7f7;
+  color: #9e9e9f;
+  font-size: 11pt;
+  margin: 0 0 60rpx 16rpx;
+}
+
+.container {
+  height: 100%;
+  padding: 0;
+  box-sizing: border-box;
+  margin: 0 auto;
+} 
+
+.card {
+  display: flex;
+  align-items: baseline;
+  margin: 30rpx auto;
+  padding: 16rpx;
+  width: 100%;
+  background-color: #f7f7f7;
+  box-sizing: border-box;
+  border-radius: 16rpx;
+  justify-content: space-around;
+}
+
+
+.meal-title {
+  font-weight: 700;
+  font-size: 13pt;
+  color: #333;
+  margin: 0 0 10rpx 0;
+}
+
+.meal-description {
+  font-weight: 400;
+  font-size: 11pt;
+  color: #333;
+  margin: 4px 0 10rpx 0;
+}
+
+.meal-image {
+  width: 80px;
+  height: 80px;
+  background-position: cover;
+  background: #9e9e9f;
+  margin: 10px;
+  border-radius: 5px;
+}
+
+.review {
+  padding: 5px 30px;
+  color: #333;
+}
+
+.extra-stuff {
+  display: flex;
+  justify-content: space-between;
+  /* position: absolute; */
+}
+
+.meal-price {
+  font-size: 16pt;
+  padding: 0 10px 0 0;
+  color: #000;
+  opacity: 0.7;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.plus {
+  padding: 20rpx;
+  background-color: #f6c752;
+  border-radius: 50%;
+  height: 20rpx;
+  width: 20rpx;
+}
+
+.meal-info {
+  display: flex;
+  align-items: center;
+}
+
+.btn-black {
+  padding: 20rpx 40rpx;
+  background-color: black;
+  color: white;
+  border-radius: 30px;
+}
+
+.order-section {
+  display: flex;
+  padding: 0 70rpx;
+  background-color: #f6c752;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 80rpx;
+}
