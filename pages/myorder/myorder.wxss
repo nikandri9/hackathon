@@ -32,14 +32,14 @@ page {
   font-weight: 600
 }
 
-.greyTag{
+.greyTag {
   padding: 16rpx 30rpx;
-  width: 210rpx;
+  width: 220rpx;
   border-radius: 10rpx;
   background-color: #f7f7f7;
   color: #9e9e9f;
   font-size: 11pt;
-  margin: 0 0 60rpx 0rpx;
+  margin: 0 0 30rpx 16rpx;
 }
  
 .orderNote{
@@ -77,20 +77,25 @@ page {
 
 .orderConfirm{
   background-color: #f6c752;
-  padding: 40rpx 60rpx;
+  padding: 40rpx 60rpx 80rpx 60rpx;
   border-radius: 16rpx;
   margin-top: 30rpx;
   display: flex;
   align-items: center;
   justify-content: space-between;
   font-size: 11pt;
-
 }
 
 .btn-yellow{
   background-color: #333333;
   color: #FFF;
   padding: 32rpx 50rpx;
-  width: 130rpx;
+  /* width: 130rpx; */
   border-radius: 50rpx;
-} 
+}
+
+.bottom {
+  width: 100%;
+  /* position: sticky;
+  bottom: 0; */
+}

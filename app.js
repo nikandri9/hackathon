@@ -10,9 +10,17 @@ App({
      // 应用名称: {{app_name}}
     wx.BaaS.init(config.appKey)
     
-    
-  },
-  globalData: {
-    userInfo: wx.getStorageSync('userInfo')
-  }
+    const self = this
+    wx.BaaS.auth.getCurrentUser().then(
+      (res) => {
+      self.globalData.userInfo = res;
+      wx.setStorageSync('userInfo', res);
+      }
+    )
+    },
+    globalData: {
+      userInfo: wx.getStorageSync('userInfo'),
+      totalPrice: wx.getStorageSync('totalPrice')
+    }
+
 })

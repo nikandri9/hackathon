@@ -8,11 +8,17 @@ Page({
     meals: null,
     orders: [],
     currentUser: null,
-    index: 0,
+    totalPrice: 0
   },
 
 
   onLoad: function (options) {
+
+    this.setData({
+      currentUser: app.globalData.userInfo,
+      totalPrice: app.globalData.totalPrice
+    })
+
     let Orders = new wx.BaaS.TableObject('orders_hack')
     const self = this
 
@@ -27,20 +33,6 @@ Page({
         console.log('err', err)
       }
     )
-
-    // let Meals = new wx.BaaS.TableObject('meals_hack')
-    // let query = new wx.BaaS.Query();
-    // query.compare('meal_id', '=', options.id)
-    // Meals.setQuery(query).find().then(
-    //   (res) => {
-    //     self.setData({
-    //       meals: res.data.objects
-    //     })
-    //   },
-    //   (err) => {
-    //     console.log('err', err)
-    //   }
-    // )
 
     this.setData({
       currentUser: app.globalData.userInfo

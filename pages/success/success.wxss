@@ -1,0 +1,38 @@
+/* pages/success/success.wxss */
+page {
+  background-color: #f6c752;
+  font-family: Montserrat;
+  color: #333;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  height: 100vh;
+}
+
+.title {
+  font-weight: 800;
+  font-size: 18pt;
+  text-align: center;
+}
+
+.text {
+  font-weight: 500;
+  font-size: 13pt;
+  text-align: center;
+  width: 65%;
+  margin: 20rpx auto;
+}
+
+.button {
+	font-size: 13pt;
+  padding: 17px;
+  border-radius: 30px;
+  background-color: #333;
+  margin: 200rpx auto 0 auto;
+  width: 360rpx;
+  color: white;
+  text-align: center;
+}

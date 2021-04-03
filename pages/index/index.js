@@ -8,38 +8,40 @@ Page({
   // start of data
   data: {
     dinerProfile: {},
-    userInfo: wx.getStorageSync('userInfo')
+    currentUser: null
   },
   // end of data
 
 
 // start of getting res profile
-  onLoad: function (res) {
-    console.log("onload",res)
-    let page = this
+  onLoad() {
+    this.setData({
+      currentUser: app.globalData.userInfo
+    })
+    
+    const self = this;
     let restaurants = new wx.BaaS.TableObject("restaurant_hack")
     restaurants.find().then(
       (res) => {
         console.log("res_hack_find",res)
-        page.setData({
+        self.setData({
           dinerProfile: res.data.objects[0]
         })
       })
     },
 // end of getting res profile
 
-userInfoHandler: function (data) {
-  let page = this
-  wx.BaaS.auth.loginWithWechat(data).then(
+userInfoHandler: function(userInfo) {
+  let self = this
+  wx.BaaS.auth.loginWithWechat(userInfo).then(
     (res) => {
-      console.log("log-in",res)
-      page.setData({
-        userInfo: res
-      })
-      wx.setStorageSync('userInfo', res)
-      // getApp().globalData.userInfo = res
-    }
-  )
+    console.log('userInfo', res);
+    self.setData({currentUser: res});
+    wx.setStorageSync('userInfo', res)
+    },
+    err => {
+      console.log('something went wrong!', err)
+  })
 },
 
 goToDiner: function(){

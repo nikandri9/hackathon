@@ -1,7 +1,7 @@
 <view class="yellowBackground"></view>
 <view class="orderContainer">
   <view>
-    <view class="title">Currify</view>
+    <view class="title">Currify Menu</view>
     <view class="greyTag">INDIAN FOOD</view>
   </view> 
 
@@ -25,12 +25,14 @@
   </view>
 </view>
 
+<view style="position: sticky; bottom: 0;" style="bottom">
   <view wx:if="{{currentUser}}">
     <view class="orderConfirm bold">
-      <view>TOTAL PRICE</view>
+      <view>TOTAL PRICE ¥{{totalPrice}}</view>
       <view class="btn-yellow bold">CONFIRM</view>
     </view>
-  </view>   
+  </view>
+</view>
 
 
 
