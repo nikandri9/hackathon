@@ -19,17 +19,18 @@
       </view>
     </view>
   </view>
-  <view wx:if="{{currentUser}}">
+
+  <!-- <view wx:if="{{currentUser}}">
     <view class="orderConfirm bold">
       <view>TOTAL PRICE</view>
       <view class="btn-yellow bold">CONFIRM</view>
     </view>
-  </view>   
+  </view>    -->
 </view>
 
-<view wx:else>
+<!-- <view wx:else>
   <view class="orderConfirm bold">
       <view>TOTAL PRICE</view>
       <view class="btn-yellow bold" bindgetuserinfo="userInfoHandler">LOGIN TO CHECK OUT</view>
   </view>
-</view>
+</view> -->
