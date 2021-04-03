@@ -8,11 +8,12 @@ Page({
   // start of data
   data: {
     dinerProfile: {},
-    // userInfo: userInfo: wx.getStorageSync('userInfo')
+    userInfo: wx.getStorageSync('userInfo')
   },
   // end of data
 
 
+// start of getting res profile
   onLoad: function (res) {
     console.log("onload",res)
     let page = this
@@ -24,7 +25,31 @@ Page({
           dinerProfile: res.data.objects[0]
         })
       })
+    },
+// end of getting res profile
+
+userInfoHandler: function (data) {
+  let page = this
+  wx.BaaS.auth.loginWithWechat(data).then(
+    (res) => {
+      console.log("log-in",res)
+      page.setData({
+        userInfo: res
+      })
+      wx.setStorageSync('userInfo', res)
+      // getApp().globalData.userInfo = res
     }
+  )
+},
+
+goToDiner: function(){
+  wx.navigateTo({
+    url: '/pages/menu/menu',
+  })
+}
+
+
+
 
 
 // end of page
