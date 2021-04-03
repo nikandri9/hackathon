@@ -5,7 +5,7 @@
 	width: 242px;
   border-radius: 32px;
   background-color: #f1f1f0;
-  margin: 200rpx 0 200rpx 0;
+  margin: 200rpx auto;
 }
 
 .button-yellow {
