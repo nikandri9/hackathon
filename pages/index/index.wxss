@@ -2,10 +2,21 @@
 
 image {
 	/* height: 242px; */
-	width: 242px;
+	width: 320px;
   border-radius: 32px;
   /* background-color: #f1f1f0; */
   /* margin: 200rpx auto; */
+}
+
+.title {
+  font-size: x-large;
+  font-weight: 300
+}
+
+.description {
+  font-size: large;
+  font-weight: 300;
+  margin-top: 10px;
 }
 
 .button-yellow {
