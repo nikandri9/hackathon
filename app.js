@@ -1,5 +1,5 @@
 // app.js
-let config = require('./keys')
+let config = require('./key')
 
 App({
   onLaunch() {
