@@ -16,5 +16,6 @@
 }
 
 .container {
-	padding: 25rpx;
+  padding: 25rpx;
+  justify-items: center;
 }
