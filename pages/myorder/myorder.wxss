@@ -1,1 +1,96 @@
+
 /* pages/myorder/myorder.wxss */
+page {
+  font-family: "Montserrat", "PingFang SC", Arial, sans-serif;
+  /* font-weight: 600; */
+  color: #333333;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.title {
+  padding: 0 0 10px 0;
+  font-size: 16pt;
+  font-weight: 600
+}
+
+.yellowBackground{
+  background-color: #f6c752;
+  height: 120rpx;
+  /* padding: 30px; */
+}
+
+.orderContainer{
+  border-radius: 60rpx;
+  margin-top: -60rpx;
+  padding: 76rpx;
+  background-color: #fff;
+  
+}
+
+.bold{
+  font-weight: 600
+}
+
+.greyTag{
+  padding: 16rpx 30rpx;
+  width: 200rpx;
+  border-radius: 10rpx;
+  background-color: #f7f7f7;
+  color: #9e9e9f;
+  font-size: 11pt;
+  margin: 0 0 60rpx 0rpx;
+}
+ 
+.orderNote{
+  background-color: #f1f1f0;
+  padding: 60rpx;
+  border-radius: 16rpx;
+  /* margin-bottom: 80rpx; */
+}
+
+.titleLine{
+  border-bottom: 2rpx solid #333333;
+  width: 480rpx;
+  padding-top: 50rpx;
+}
+  
+.cardOrder{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 50rpx 0 0;
+} 
+
+.imgText{
+  display: flex;
+  align-items: center;
+}
+
+.squareImage {
+  height: 120rpx;
+  width: 120rpx;
+  background-color: white;
+  border-radius: 8rpx;
+  margin-right: 30rpx;
+}
+
+.orderConfirm{
+  background-color: #f6c752;
+  padding: 40rpx 60rpx;
+  border-radius: 16rpx;
+  margin-top: 30rpx;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 11pt;
+
+}
+
+.btn-yellow{
+  background-color: #333333;
+  color: #FFF;
+  padding: 32rpx 50rpx;
+  width: 130rpx;
+  border-radius: 50rpx;
+} 

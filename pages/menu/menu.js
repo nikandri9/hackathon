@@ -1,17 +1,21 @@
 // pages/menu/menu.js
 Page({
 
+
   data: {
 
   },
+
 
   onLoad: function (options) {
 
   },
 
+
   onReady: function () {
 
   },
+
 
   onShow: function () {
 
@@ -22,9 +26,11 @@ Page({
 
   },
 
+
   onUnload: function () {
 
   },
+
 
   onPullDownRefresh: function () {
 
@@ -34,6 +40,7 @@ Page({
   onReachBottom: function () {
 
   },
+
 
   onShareAppMessage: function () {
 

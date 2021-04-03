@@ -4,11 +4,13 @@
     "pages/myorder/myorder",
     "pages/menu/menu"
   ],
+
   "window":{
     "backgroundTextStyle":"light",
     "navigationBarBackgroundColor": "#f6c752",
-    "navigationBarTitleText": "Weixin",
-    "navigationBarTextStyle":"black"
+    "navigationBarTitleText": "Currify Restaurant",
+    "navigationBarTextStyle":"black",
+    "backgroundColor": "#f6c752"
   },
   "style": "v2",
   "sitemapLocation": "sitemap.json",

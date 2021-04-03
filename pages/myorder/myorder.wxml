@@ -1,2 +1,26 @@
-<!--pages/myorder/myorder.wxml-->
-<text>pages/myorder/myorder.wxml</text>
+
+<view class="yellowBackground"></view>
+<view class="orderContainer">
+  <view>
+    <view class="title">Currify</view>
+    <view class="greyTag">INDIAN FOOD</view>
+  </view> 
+
+  <view class="orderNote">
+    <view>
+      <view class="bold">MY ORDER</view>
+      <view class="titleLine"></view>
+      <view class="cardOrder">
+        <view class="imgText">
+          <image class="squareImage"></image>
+          <view>food name</view>
+        </view>
+        <view class="bold">price</view>
+      </view>
+    </view>
+  </view>
+  <view class="orderConfirm bold">
+    <view>TOTAL PRICE</view>
+    <view class="btn-yellow bold">CONFIRM</view>
+  </view>
+</view>
