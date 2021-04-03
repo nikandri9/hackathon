@@ -67,6 +67,12 @@
         {
           "name": "pages/myorder/myorder",
           "pathName": "pages/myorder/myorder",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/menu/menu",
+          "pathName": "pages/menu/menu",
           "scene": null
         }
       ]
