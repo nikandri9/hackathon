@@ -1,5 +1,4 @@
 
-
 <!--pages/hackathon/hackathon.wxml-->
 <view class="title">RESTAURANT NAME</view>
 <view class="rest-tag">INDIAN FOOD</view>
@@ -17,9 +16,11 @@
         <view class="plus">+</view>
       </view>
 </view>
-<view class="order-section">
-  <view>TOTAL</view>
-  <view>$150</view>
-  <view class="btn-black">ORDER</view>
-</view>
+<block class="bottom">
+  <view class="order-section">
+    <view>TOTAL</view>
+    <view>$150</view>
+    <view class="btn-black">ORDER</view>
+  </view>
+</block>
 

@@ -102,18 +102,24 @@ page {
 }
 
 .btn-black {
-  padding: 20rpx 40rpx;
+  padding: 30rpx 40rpx;
   background-color: black;
   color: white;
   border-radius: 30px;
+  font-size: 10pt;
 }
 
 .order-section {
   display: flex;
-  padding: 0 70rpx;
+  padding: 0 0 0 70rpx;
   background-color: #f6c752;
   justify-content: space-between;
   align-items: center;
   border-radius: 80rpx;
+}
+
+.bottom {
+  position: fixed;
+  bottom: 50rpx;
 }
 
