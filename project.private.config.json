@@ -21,6 +21,18 @@
         {
           "name": "index",
           "pathName": "pages/index/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "My Order",
+          "pathName": "pages/myorder/myorder",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "Success",
+          "pathName": "pages/success/success",
           "scene": null
         }
       ]

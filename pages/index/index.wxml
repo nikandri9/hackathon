@@ -1,26 +1,26 @@
 <!--index.wxml-->
+
+<!-- start of log-in --> 
+<view class="grey-block">
+	<block wx:if="{{currentUser}}">
+		<view class="user-card">
+			<image src="{{currentUser.avatar}}" alt="You" class="user-avatar"></image>
+			<view class="user-text-area">
+				<text class="user-description">Welcome back, {{currentUser.nickname}}</text>
+				<text class="user-description">📍 {{currentUser.province}}, {{currentUser.country}}</text>
+			</view>
+		</view>
+	</block>
+	<block wx:else>
+				<button class="button-yellow" open-type="getUserInfo" bindgetuserinfo="userInfoHandler">LOG IN</button>
+	</block>
+</view>
+<!-- end of log-in -->
+
 <view class="container">
-		<!-- <view class="picture-landing"></view> -->
-		<!-- <view class="dinerImage"> -->
-		
-			<image src="{{dinerProfile.img.path}}" mode="widthFix"></image>
+			<view style="background-image: url({{dinerProfile.img.path}})" class="img-restaurant"></view>
 			<view class="title" style="margin-top: 30px">{{dinerProfile.name}}</view>
 			<view class="description">{{dinerProfile.description}}</view>
-		<!-- </view> -->
-
-	<!-- start of log-in -->
-	 <view wx:if="{{userInfo}}">
-
-			<button class="button-yellow" style="margin-top: 100px" bindtap="goToDiner">Go To Diner</button>
-			
-	 </view>
-	
-	 <view wx:else>
-
-			<button class="button-yellow" style="margin-top: 100px"  open-type="getUserInfo" bindgetuserinfo="userInfoHandler">Log In</button>
-			
-	 </view>
-	<!-- end of log-in -->
-
-
+<!-- </view> -->
 </view>
+<button class="button-yellow" bindtap="goToDiner">SEE MENU</button>

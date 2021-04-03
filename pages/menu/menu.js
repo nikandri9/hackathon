@@ -6,12 +6,19 @@ Page({
   data: {
     restaurant: null,
     meals: null,
+    orders: [],
     currentUser: null,
-    index: 0,
+    count: 0,
+    totalPrice: 0
   },
 
 
   onLoad: function (options) {
+    this.setData({
+      currentUser: app.globalData.userInfo,
+      totalPrice: app.globalData.totalPrice
+    })
+
     let Meals = new wx.BaaS.TableObject('meals_hack')
     const self = this
 
@@ -26,22 +33,6 @@ Page({
         console.log('err', err)
       }
     )
-
-    this.setData({
-      currentUser: app.globalData.userInfo
-    })
-  },
-
-  
-
-
-  onReady: function () {
-
-  },
-
-
-  onShow: function () {
-
   },
 
   createOrder: function(e) {
@@ -60,8 +51,37 @@ Page({
         wx.showToast({
           title: 'Saved',
         })
+        this.calculatePrice()
       }, (err) => {
         console.log('order failed saving', err)
+      }
+    )
+  },
+
+  calculatePrice() {
+    let Order = new wx.BaaS.TableObject('orders_hack')
+    const self = this
+    Order.expand(['meal_id']).find().then(
+      (res) => {
+        console.log('You have meals', res);
+        self.setData({
+          orders: res.data.objects
+        })
+        const myOrders = this.data.orders
+        let totalPrice = 0;
+        for (let i = 0; i < myOrders.length; i += 1 ) {
+          let number = myOrders[i].count
+          let price = myOrders[i].meal_id.price
+          console.log(number)
+          console.log(price)
+          totalPrice = totalPrice + (number * price)
+        }
+        console.log(totalPrice)
+        this.setData({totalPrice})
+        wx.setStorageSync('totalPrice', totalPrice)
+      },
+      (err) => {
+        console.log('err', err)
       }
     )
   },

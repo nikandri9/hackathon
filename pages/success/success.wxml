@@ -1,0 +1,8 @@
+<!--pages/success/success.wxml-->
+<view class="container">
+  <view>
+    <view class="title">Thank you!</view>
+    <view class="text">Your order will be delivered in 30 minutes 🚀</view>
+    <view class="button" bindtap="goToIndex">BACK TO HOME</view>
+  </view>
+</view>

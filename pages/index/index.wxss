@@ -1,21 +1,24 @@
 /**index.wxss**/
+page {
+  font-family: Montserrat;
+}
 
-image {
-	/* height: 242px; */
-	width: 320px;
+.img-restaurant {
+	height: 320px;
+	width: 100%;
   border-radius: 32px;
   /* background-color: #f1f1f0; */
-  /* margin: 200rpx auto; */
+  margin: 0 auto;
 }
 
 .title {
-  font-size: x-large;
-  font-weight: 300
+  font-size: 20pt;
+  font-weight: 600;
 }
 
 .description {
-  font-size: large;
-  font-weight: 300;
+  font-size: 13pt;
+  font-weight: 400;
   margin-top: 10px;
 }
 
@@ -24,6 +27,7 @@ image {
   padding: 17px;
   border-radius: 30px;
   background-color: #f6c752;
+  margin: 20rpx 0;
 }
 
 .container {
@@ -31,7 +35,51 @@ image {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-between;
-  padding: 200rpx 0;
+  /* justify-content: space-between; */
+  margin: 20rpx auto;
+  padding: 0 45rpx 20rpx 45rpx;
   box-sizing: border-box;
-} 
+}
+
+.user-card {
+  display: flex;
+  align-items: center;
+  margin: 0 auto;
+  width: 80%;
+}
+
+.user-text-area {
+  display: inline-block;
+  margin-left: 20px;
+}
+
+.user-avatar {
+  margin: 20px 0 20px 5px;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+}
+
+.user-description {
+  padding: 2px 0;
+  font-weight: 500;
+  font-size: 13pt;
+  color: #333;
+  display: block;
+  /* margin: 10px; */
+}
+
+.data {
+  display: block;
+  padding: 0 0 60px 60px;
+}
+
+.grey-block {
+  background-color: #f7f7f7;
+  border-radius: 50rpx;
+  margin: 50rpx auto;
+  height: 220rpx;
+  display: flex;
+  align-items: center;
+  width: 90%
+}

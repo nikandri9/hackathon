@@ -2,7 +2,8 @@
   "pages":[
     "pages/index/index",
     "pages/myorder/myorder",
-    "pages/menu/menu"
+    "pages/menu/menu",
+    "pages/success/success"
   ],
 
   "window":{

@@ -22,7 +22,7 @@ page {
   background-color: #f7f7f7;
   color: #9e9e9f;
   font-size: 11pt;
-  margin: 0 0 60rpx 16rpx;
+  margin: 0 0 30rpx 16rpx;
 }
 
 .container {
@@ -36,7 +36,7 @@ page {
   display: flex;
   align-items: baseline;
   margin: 30rpx auto;
-  padding: 16rpx;
+  padding: 8rpx;
   width: 100%;
   background-color: #f7f7f7;
   box-sizing: border-box;
@@ -60,8 +60,8 @@ page {
 }
 
 .meal-image {
-  width: 80px;
-  height: 80px;
+  width: 100px;
+  height: 100px;
   background-position: cover;
   background: #9e9e9f;
   margin: 10px;
@@ -89,11 +89,12 @@ page {
 }
 
 .plus {
-  padding: 20rpx;
+  padding: 6rpx 20rpx 10rpx 20rpx;
   background-color: #f6c752;
   border-radius: 50%;
-  height: 20rpx;
-  width: 20rpx;
+  margin: 0 20rpx 20rpx 0;
+  /* height: 20rpx; */
+  /* width: 20rpx; */
 }
 
 .meal-info {
@@ -102,11 +103,11 @@ page {
 }
 
 .btn-black {
-  padding: 30rpx 40rpx;
+  padding: 40rpx 80rpx;
   background-color: black;
   color: white;
-  border-radius: 30px;
-  font-size: 10pt;
+  border-radius: 60px;
+  font-size: 12pt;
 }
 
 .order-section {
@@ -122,4 +123,3 @@ page {
   position: fixed;
   bottom: 50rpx;
 }
-

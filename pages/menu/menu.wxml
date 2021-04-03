@@ -1,6 +1,6 @@
 
 <!--pages/hackathon/hackathon.wxml-->
-<view class="title">RESTAURANT NAME</view>
+<view class="title">Currify</view>
 <view class="rest-tag">INDIAN FOOD</view>
 
 <view class="container">
@@ -13,17 +13,19 @@
             <!-- <view class="meal-description"></view> -->
               <view class="meal-price">¥{{meal.price}}</view>
           </view>
-      </view>
-        <view wx:if="{{currentUser}}" class="plus" bindtap="createOrder" data-id="{{meal.id}}">+</view>
-      
+        </view>
+        <view wx:if="{{currentUser}}">
+          <view class="plus" bindtap="createOrder" data-id="{{meal.id}}">+</view>
+        </view>
       </view>
     </block>
 </view>
-<block class="bottom">
+
+  <view style="position: sticky" class="bottom">
   <view class="order-section">
     <view>TOTAL</view>
-    <view>$150</view>
+    <view wx:if="{{totalPrice}}" >${{totalPrice}}</view>
+    <view wx:else>$0</view>
     <view class="btn-black" bindtap='goToOrder'>ORDER</view>
   </view>
-</block>
-
+</view>
