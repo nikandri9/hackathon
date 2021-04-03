@@ -5,7 +5,7 @@ Page({
 
   data: {
     restaurant: null,
-    meals: [],
+    meals: null,
     currentUser: null,
     index: 0,
   },
@@ -15,11 +15,11 @@ Page({
     let Meals = new wx.BaaS.TableObject('meals_hack')
     const self = this
 
-    Meals.get(options.id).then(
+    Meals.find().then(
       (res) => {
         console.log('res', res);
         self.setData({
-          meals: res.data
+          meals: res.data.objects
         })
       },
       (err) => {
@@ -31,6 +31,8 @@ Page({
       currentUser: app.globalData.userInfo
     })
   },
+
+  
 
 
   onReady: function () {
@@ -48,7 +50,7 @@ Page({
     let newOrder = Order.create()
     newOrder.set({
       meal_id: e.currentTarget.dataset.id,
-      user_id: this.data.currentUser.id,
+      // user_id: this.data.currentUser.id,
       count: 1
     })
 
@@ -58,7 +60,22 @@ Page({
         wx.showToast({
           title: 'Saved',
         })
+      }, (err) => {
+        console.log('order failed saving', err)
       }
     )
   },
+
+  // userInfoHandler: function(userInfo) {
+  //   let self = this
+  //   wx.BaaS.auth.loginWithWechat(userInfo).then(
+  //     (res) => {
+  //     console.log('userInfo', res);
+  //     self.setData({currentUser: res});
+  //     wx.setStorageSync('userInfo', res)
+  //     },
+  //     err => {
+  //     console.log('something went wrong!', err)
+  //   })
+  // }
 })

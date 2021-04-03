@@ -3,18 +3,20 @@
 <view class="title">RESTAURANT NAME</view>
 <view class="rest-tag">INDIAN FOOD</view>
 <view class="container">
-    <!-- <view wx:for = "{{restaurants}}" wx:key="key" wx:for-item = "rest"> -->
+  <block wx:for="{{meals}}" wx:key="key" wx:for-item="meal" class="meals-grid">
       <view class="card">
         <view class="meal-info">
-          <view style="background-image: url('{{rest.Picture.path}}'); background-size: cover;" alt="restaurant" class="meal-image"></view>
+          <view style="background-image: url('{{meal.img.path}}'); background-size: cover;" alt="restaurant" class="meal-image"></view>
           <view>
-            <view class="meal-title">Meal name</view>
-            <view class="meal-description">Meal description</view>
-              <view class="meal-price">$11</view>
+            <view class="meal-title">{{meal.name}}</view>
+            <!-- <view class="meal-description"></view> -->
+              <view class="meal-price">¥{{meal.price}}</view>
           </view>
       </view>
-        <view class="plus">+</view>
+        <view class="plus" bindtap="createOrder" data-id="{{meal.id}}">+</view>
+      
       </view>
+    </block>
 </view>
 <block class="bottom">
   <view class="order-section">
